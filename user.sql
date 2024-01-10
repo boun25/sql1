@@ -24,7 +24,10 @@ drop user 'utilisateur'@'hote';
 
 /* Voir les utilisateurs crées ou présents */ 
 select user from mysql.user;
+/*un utilisateur  qui aura droit de consultation sur la base de données*/
 
+  GRANT ALL ON `database`. * TO 'user'@'localhost';
+ 
 /* Voir l'utilisateur courant */
  select current.user ;
 ​
@@ -110,3 +113,5 @@ insert into adresse (numero, rue, ville, code_postal, id_personne) values(12, 'R
     insert into telephones (numero, types, id_personne) values (0456789012, 'f', 1), (0789011245, 'p', 1);
     insert into telephones (numero, types, id_personne) values (04567587912, 'f', 2), (0689124578, 'p', 2);
     insert into telephones (numero, types, id_personne) values (0556789545, 'f', 3), (0745128729, 'p', 3);
+
+
